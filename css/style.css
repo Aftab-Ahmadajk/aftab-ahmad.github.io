@@ -8812,7 +8812,7 @@ h1, h2, h3, h4, h5,
 .resume-wrap {
   width: 100%;
   margin-bottom: 30px;
-  background: rgba(255, 253, 208, 1);
+  background: #d1d8e1;
   padding: 30px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
