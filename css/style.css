@@ -55,9 +55,9 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #d1d8e1;
+  color: #080808;
   text-align: left;
-  background-color: #d1d8e1 !important; }
+  background-color: #d1d8e1 !important; }  
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -388,7 +388,7 @@ mark,
 .blockquote-footer {
   display: block;
   font-size: 80%;
-  color: #6c757d; }
+  color: #054985; }
   .blockquote-footer::before {
     content: "\2014\00A0"; }
 
@@ -9398,7 +9398,7 @@ textarea.form-control {
       border: 1px solid transparent; }
 
 .contact-section .contact-info p a {
-  color: #000000; }
+  color: #E9F1FA; }
 
 .contact-section .box {
   width: 100%;
