@@ -138,12 +138,38 @@
     <nav class="navbar navbar-expand-lg navbar-Yellow ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
     <div class="container">
         <a class="navbar-brand" style="color: #f7f7f7" href="index.html">Data Professional</a>
+        <div class="navbar-clock d-flex" style="
+    margin-left: auto; 
+    margin-right: 10px;
+    align-items: center; 
+    background: #000000; 
+    padding: 4px 10px; 
+    border-radius: 8px; 
+    border: 1px solid rgba(255,189,57,0.3);
+    white-space: nowrap;">
+    
+    <span id="current-time" style="
+        color: #ffbd39; 
+        font-weight: 700; 
+        font-family: 'Courier New', Courier, monospace; 
+        font-size: 11px;"> 00:00 AM
+    </span>
+    
+    <span style="color: rgba(255,255,255,0.2); margin: 0 6px;">|</span>
+    
+    <span id="current-date" style="
+        color: #f7f7f7; 
+        font-size: 10px; 
+        font-weight: 500;">
+        Date
+    </span>
+</div>
 
-        <div class="navbar-clock d-none d-lg-flex" style="margin-left: 15px; align-items: center;">
+        <!-- <div class="navbar-clock d-none d-lg-flex" style="margin-left: 15px; align-items: center;">
             <span id="current-time" style="color: #ffbd39; font-weight: 700; font-family: 'Courier New', Courier, monospace; font-size: 14px;">00:00:00 AM</span>
             <span style="color: rgba(255,255,255,0.3); margin: 0 10px;">|</span>
             <span id="current-date" style="color: #140909; font-size: 13px; font-weight: 500;">Date</span>
-        </div>
+        </div> -->
 
         <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
@@ -393,7 +419,6 @@
                     </div>
                 </div>
 
-                <br>
 
                 <div class="row">
                     <div class="col-md-12 mb-4">
