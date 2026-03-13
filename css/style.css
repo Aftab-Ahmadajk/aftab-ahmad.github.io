@@ -10002,3 +10002,31 @@ textarea.form-control {
     display: flex;
     align-items: center;
 }
+
+/* Reduce excessive section spacing */
+.ftco-section {
+    padding: 3em 0 !important; /* Reduced from 7em to 3em */
+}
+
+/* Remove spacing between the Home section and the next section */
+#home-section {
+    padding-bottom: 0 !important;
+}
+
+/* Fix for the gray rounded boxes having too much internal space */
+.rounded-card {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Target mobile specifically to further reduce gaps */
+@media (max-width: 767.98px) {
+    .ftco-section {
+        padding: 2em 0 !important;
+    }
+    .rounded-card {
+        padding: 20px 15px !important;
+    }
+}
