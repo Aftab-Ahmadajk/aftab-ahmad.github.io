@@ -107,6 +107,26 @@
   transform: scale(1.1);
 }
 
+/* Particle Background Support */
+#home-section {
+  position: relative;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+#particles-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.home-content-wrapper {
+  position: relative;
+  z-index: 1;
+}
 
 </style>
 
@@ -116,606 +136,380 @@
 	  
 	  
     <nav class="navbar navbar-expand-lg navbar-Yellow ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" style="color: #EDF7F6" href="index.html">Data Professional</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu" ></span> Menu
-	      </button>
+    <div class="container">
+        <a class="navbar-brand" style="color: #f7f7f7" href="index.html">Data Professional</a>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-			<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>	
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
+        <div class="navbar-clock d-none d-lg-flex" style="margin-left: 15px; align-items: center;">
+            <span id="current-time" style="color: #ffbd39; font-weight: 700; font-family: 'Courier New', Courier, monospace; font-size: 14px;">00:00:00 AM</span>
+            <span style="color: rgba(255,255,255,0.3); margin: 0 10px;">|</span>
+            <span id="current-date" style="color: #140909; font-size: 13px; font-weight: 500;">Date</span>
+        </div>
 
-	<div class="container">
-		<div class="col-md-12 heading-section ftco-animate"></div>
-			<div class="row" style="background-color:#f7f7f7;"> 
-		  	<div class="col-lg-12 text-center"> <br>
-				<img style="width:25%" src="./images/pro-pic.png">
-				<h4 class="mt-2" style="color: #070604"><strong>Aftab Ahmad</strong></h4>
-				<!-- <h2 style="font-size:16pt;">A Google Certified Data Analyst</h2>         -->
-				<!-- <p style="padding-top:5px"><a href="#" style="color:#060609">Brief Intro</a></p> -->
-				<!-- <br> -->
-				<br>
-				<p style="text-align:justify; max-width:900px; color: #070604; margin:auto; padding-bottom:5px;">Hi, I’m Aftab Ahmad Khan a data professional with a Master’s in Commerce and a strong focus on analytics-driven decision making. I bring a solid foundation in statistical analysis, advanced data visualization, and tools such as <strong> Excel </strong>, <strong> Python </strong>, <strong> Tableau </strong>, <strong> Power BI </strong>, and <strong> SQL </strong> to turn complex data into clear, actionable insights. By blending business domain knowledge with technical expertise, I help organizations solve real problems, optimize performance, and make smarter decisions in today’s data-driven world.
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
 
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav nav ml-auto">
+                <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+                <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li> 
+                <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+                <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+                <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<section id="contact">
-			  	<!-- <h5>Contact</h5> -->				  
-			  	<!-- <li h5 style = "color: #000000"> <span>Email:</span> <span>aftabajk@gmail.com</span></h5> </li> -->
-			  	<p style = "color: #000000;"><strong>𝖯𝗋𝗈𝖿𝖾𝗌𝗌𝗂𝗈𝗇𝖺𝗅 𝖯𝗋𝗈𝖿𝗂𝗅𝖾𝗌 👇</strong> </p>
-				  <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					<li class="ftco-animate"><a href="https://github.com/Aftab-Ahmadajk"><span class="icon-github"></span></a></li>
-					<li class="ftco-animate"><a href="https://www.linkedin.com/in/aftab-ahmad-data-analyst/"><span class="icon-linkedin"></span></a></li>
-			  	<!-- Social Media Links -->
-			  	<!-- <div class="social-media">
-					<a href="https://www.linkedin.com/yourprofile" target="_blank" rel="noopener noreferrer">
-				  	<img src="linkedin-icon.png" alt="LinkedIn">
-					</a>
-					<a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
-				  	<img src="twitter-icon.png" alt="Twitter">
-					</a>
-					<a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
-				  	<img src="github-icon.png" alt="GitHub">
-					</a> -->
-					<!-- Add more social media links as needed -->
-			  	<!-- </div> -->
-				</section>
-		  	</div>
-		</div>
-		</div>
-		
-	  </div>
+    <section id="home-section">
+    <canvas id="particles-canvas"></canvas>
+    <div class="container home-content-wrapper">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 text-center">
+                
+                <div class="profile-glass-card ftco-animate">
+                    <img src="./images/pro-pic.png" alt="Aftab Ahmad" class="hero-img">
+                    <h1 class="hero-name">Aftab Ahmad</h1>
+                    <!-- <span class="hero-tagline">Data Analyst | M.Com Graduate</span> -->
+                    
+                    <p class="hero-desc">
+                        Hi, I’m Aftab Ahmad Khan a data professional with a Master’s in Commerce and a strong focus on analytics-driven decision making. I bring a solid foundation in statistical analysis, advanced data visualization, and tools such as <strong> Excel </strong>, <strong> Python </strong>, <strong> Tableau </strong>, <strong> Power BI </strong>, and <strong> SQL </strong> to Bridging the gap between complex data and strategic business growth. By blending business domain knowledge with technical expertise, I help organizations solve real problems, optimize performance, and make smarter decisions in today’s data-driven world.
+                    </p>
 
+                    <div class="d-flex flex-wrap justify-content-center align-items-center">
+                        <a href="#project-section" class="cta-button mr-3 mb-3">Visit My Projects</a>
+                        
+                        <div class="social-mini-block mb-3">
+                            <ul class="ftco-footer-social list-unstyled d-flex mb-0">
+                                <li class="ftco-animate"><a href="https://github.com/Aftab-Ahmadajk" title="GitHub"><span class="icon-github"></span></a></li>
+                                <li class="ftco-animate"><a href="https://www.linkedin.com/in/aftab-ahmad-data-analyst/" title="LinkedIn"><span class="icon-linkedin"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
+            </div>
+        </div>
+    </div>
+</section>
 	
-	<section class="ftco-section" id="project-section">
-		<div class="container">
-			<div class="row" style="background-color:#f7f7f7">
-				<div class="col-lg-12 text-left"> <br>
-		  			<div class="row justify-content-center mb-5 pb-5">
-						<div class="col-md-9 heading-section text-center ftco-animate">
-			  			<!-- <h1 class="big big-2">Projects</h1> -->
- 			  			<h3 class="mb-2" style="color: #000000"><strong>Projects</strong></h3>
-<!-- 						<h5 class="mb-2" style="color: #000000">Welcome to My Portfolio</h5> -->
-						<p style = "color: #000000">Discover my projects showcasing data analysis, data visualization and storytelling skills that drive actionable insights. (Click on the image or the blue text below to read the detailed analysis.)</p>
-		  			</div>
-		  			<div class="row d-flex">
+<section class="ftco-section" id="project-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-md-9 heading-section text-center ftco-animate">
+        <h3 class="mb-2" style="color: #000000"><strong>Featured Projects</strong></h3>
+        <p style="color: #666">Discover my projects showcasing end-to-end data analysis, data visualization and storytelling skills that drive actionable insights.</p>
+      </div>
+    </div>  
 
-						<div class="col-md-4 d-flex ftco-animate">
-							<div class="blog-entry justify-content-end">
-							<a href="https://github.com/Aftab-Ahmadajk/-Aftab-Ahmadajk-Performance-Assessment-of-Goodcab-A-Data-Analysis-Project-" class="block-20 zoom-effect" style="background-image: url('images/Trips_1.png');">
-							</a>
-							<div class="text mt-3 float-right d-block">
-  
-				  			<h3 class="heading"><a href="https://github.com/Aftab-Ahmadajk/-Aftab-Ahmadajk-Performance-Assessment-of-Goodcab-A-Data-Analysis-Project-">Goodcab Performance Data Analysis using Power BI (Unguided)</a></h3>
-				  			<p style = "color: #000000">Uncovering Insights from Six-Month Data Across Key Passenger and Trip Metrics.</p>
-							</div>
-			  			</div>
-						</div>
-						
-						<div class="col-md-4 d-flex ftco-animate">
-							<div class="blog-entry justify-content-end">
-							<a href="https://github.com/Aftab-Ahmadajk/Atliq_Motor_Data_Analysis_Project" class="block-20 zoom-effect" style="background-image: url('images/Trends.png');">
-							</a>
-							<div class="text mt-3 float-right d-block">
-  
-				  			<h3 class="heading"><a href="https://github.com/Aftab-Ahmadajk/Atliq_Motor_Data_Analysis_Project">AtliQ Motors Data Analysis Project using PowerBI. (Unguided)</a></h3>
-				  			<p style = "color: #000000">Analyzed AtliQ Motors data to gain insights from the Indian Electric Vehicle Market.</p>
-							</div>
-			  			</div>
-						</div>
-					
-						<div class="col-md-4 d-flex ftco-animate">
-							<div class="blog-entry justify-content-end">
-							<a href="https://github.com/Aftab-Ahmadajk/Google-Data-Analytics-Capstone-Cyclistic-Project/blob/main/README.md" class="block-20 zoom-effect" style="background-image: url('images/davy-1.png');">
-							</a>
-							<div class="text mt-3 float-right d-block">
-  
-				  			<h3 class="heading"><a href="https://github.com/Aftab-Ahmadajk/Google-Data-Analytics-Capstone-Cyclistic-Project/blob/main/README.md">Cyclistic Bike-Share CapStone Project using Python & Tableau (Hands-on)</a></h3>
-				  			<p style = "color: #000000">Analyzed Cyclistic's Chicago bike-share data to plan marketing campaigns aimed at converting casual riders into annual members.</p>
-							</div>
-			  			</div>
-						</div>
+    <div class="row d-flex">
+      <div class="col-md-4 d-flex mb-4 ftco-animate">
+        <div class="blog-entry">
+          <a href="projects/bahrat-Herald-detail.html" class="block-20" style="background-image: url('images/RPC_03.jpg');"></a>
+          <div class="text mt-3">
+            <div class="tag-container">
+              <span class="tag">Excel</span><span class="tag">Power BI</span>
+            </div>
+            <h3 class="heading"><a href="projects/Bharat-Herald-detail.html">Bharat Herald Media & Survival Analysis (Unguided)</a></h3>
+            <p style="color: #555; font-size: 14px;">Uncovering causes for decline of a 70-year-old Indian legacy newspaper.</p>
+          </div>
+        </div>
+      </div>
 
-						<div class="col-md-4 d-flex ftco-animate">
-							<div class="blog-entry justify-content-end">
-							<a href="https://github.com/Aftab-Ahmadajk/Global-Shark-Attack-Data-analysis-Case-Study" class="block-20 zoom-effect" style="background-image: url('images/pic-02.jpg');">
-							</a>
-							<div class="text mt-3 float-right d-block">
-  
-				  			<h3 class="heading"><a href="https://github.com/Aftab-Ahmadajk/Global-Shark-Attack-Data-analysis-Case-Study">Global Shark Attack Data Analysis Project using Excel & PowerBI (Unguided)</a></h3>
-				  			<p style = "color: #000000">Analyzed Global Shark Attack Data to inform decision-making and implement measures to mitigate shark attack risks worldwide.</p>
-							</div>
-			  			</div>
-						</div>	
+      <div class="col-md-4 d-flex mb-4 ftco-animate">
+        <div class="blog-entry">
+          <a href="projects/goodcab-detail.html" class="block-20" style="background-image: url('images/galaxy-3.jpg');"></a>
+          <div class="text mt-3">
+            <div class="tag-container">
+              <span class="tag">Power BI</span><span class="tag">Excel</span>
+            </div>
+            <h3 class="heading"><a href="projects/goodcab-detail.html">GoodCabs Performance Data Analysis Project (Unguided)</a></h3>
+            <p style="color: #555; font-size: 14px;">Uncovering Insights from Six-Month Data Across Key Passenger and Trip Metrics..</p>
+          </div>
+        </div>
+      </div>
 
-						<div class="col-md-4 d-flex ftco-animate">
-							<div class="blog-entry justify-content-left">
-							<a href="https://github.com/Aftab-Ahmadajk/World_Bank_Credits_Grants_Data_Analysis_Project" class="block-20 zoom-effect" style="background-image: url('images/world_bank.jpg');">
-							</a>
-							<div class="text mt-3 d-block">
-  
-				  			<h3 class="heading"><a href="https://github.com/Aftab-Ahmadajk/World_Bank_Credits_Grants_Data_Analysis_Project">World Bank Loans Data Analysis Project using Python & PowerBI (Unguided)</a></h3>
-				  			<p style = "color: #000000">Analyzed World Bank credits and grants to uncover insights for alleviating recipient countries' debt burdens.</p>
-							</div>
-			  			</div>
-						</div>
-					</div>
-	  				<br>
-					  <div class="row" style="background-color:#f7f7f7">
-						<div class="col-lg-12 text-left"> <br>
-								<div class="row justify-content-center">
-									<div class="col-md-12 ftco-animate text-center">
-										<h4> 𝖬𝗈𝗋𝖾 𝖯𝗋𝗈𝗃𝖾𝖼𝗍𝗌 𝗈𝗇 <span> 𝖦𝗂𝗍𝗁𝗎𝖻  </span> </h4>
-										<h2><a href="https://github.com/Aftab-Ahmadajk?tab=overview&from=2024-02-01&to=2024-02-29" class="btn btn-primary py-3 px-3">Github</a></h2>
-									</div>
-								</div>
-						</div>
-					</div>
-					
-		  			<!-- added justify-content-center to center align the last two projects -->
-		  			<!-- <div class="row d-flex justify-content-center">  
-			  			<div class="col-md-4 d-flex ftco-animate">
-				  			<div class="blog-entry justify-content-end">
-				  			<a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
-				  			</a>
-				  			<div class="text mt-3 float-right d-block">
-	
-								<h3 class="heading"><a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a></h3>
-								<p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
-				  			</div>
-							</div>
-			 			 </div>
-			  			<div class="col-md-4 d-flex ftco-animate">
-				  			<div class="blog-entry justify-content-end">
-				  			<a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
-				  			</a>
-				  			<div class="text mt-3 float-right d-block">
-	
-								<h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a></h3>
-								<p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
-				  			</div>
-							</div>
-			  			</div>
-		   			</div> -->
-				</div>					
-			</div>
-		</div>
-	</section>
-  
+      <div class="col-md-4 d-flex mb-4 ftco-animate">
+        <div class="blog-entry">
+          <a href="projects/atliq-detail.html" class="block-20" style="background-image: url('images/Trends.png');"></a>
+          <div class="text mt-3">
+            <div class="tag-container">
+              <span class="tag">Power BI</span><span class="tag">Excel</span>
+            </div>
+            <h3 class="heading"><a href="projects/atliq-detail.html">AtliQ Motors Data Analysis Project (Unguided)</a></h3>
+            <p style="color: #555; font-size: 14px;">Analyzed AtliQ Motors data to gain insights from the Indian Electric Vehicle Market..</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex mb-4 ftco-animate">
+        <div class="blog-entry">
+          <a href="projects/cyclistic-detail.html" class="block-20" style="background-image: url('images/davy-1.png');"></a>
+          <div class="text mt-3">
+            <div class="tag-container">
+              <span class="tag">Python</span><span class="tag">Tableau</span>
+            </div>
+            <h3 class="heading"><a href="projects/cyclistic-detail.html">Cyclistic Bike-Share CapStone Project (Hands-on)</a></h3>
+            <p style="color: #555; font-size: 14px;">Analyzed Cyclistic's Chicago bike-share data to plan marketing campaigns aimed at converting casual riders into annual members..</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex mb-4 ftco-animate">
+        <div class="blog-entry">
+          <a href="projects/shark-detail.html" class="block-20" style="background-image: url('images/pic-02.jpg');"></a>
+          <div class="text mt-3">
+            <div class="tag-container">
+              <span class="tag">Excel</span><span class="tag">Power BI</span>
+            </div>
+            <h3 class="heading"><a href="projects/shark-detail.html">Global Shark Attack Data Analysis Case Study (Unguided)</a></h3>
+            <p style="color: #555; font-size: 14px;">Analyzed Global Shark Attack Data to inform decision-making and implement measures to mitigate shark attack risks worldwide..</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex mb-4 ftco-animate">
+        <div class="blog-entry">
+          <a href="projects/worldbank-detail.html" class="block-20" style="background-image: url('images/world_bank.jpg');"></a>
+          <div class="text mt-3">
+            <div class="tag-container">
+              <span class="tag">Python</span><span class="tag">Power BI</span>
+            </div>
+            <h3 class="heading"><a href="projects/worldbank-detail.html">World Bank Loan Analysis</a></h3>
+            <p style="color: #555; font-size: 14px;">Financial insights into global grants and recipient debt burdens.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-12 text-center">
+        <p>To see more projects visit Github Profile.</p>
+        <a href="https://github.com/Aftab-Ahmadajk" class="btn btn-primary py-3 px-5" style="border-radius: 50px;">Github</a>
+      </div>
+    </div>
+  </div>
+</section>  
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row" style="background-color:#f7f7f7"> 
-				<div class="col-lg-12 text-left"> <br>
-					<div class="row">
-						<div class="row d-flex align-items-stretch">
-						<!-- <div class="row d-flex"> -->
-							<!-- <div class="col-md-6 col-lg-5 d-flex">
-								<div class="img-about img d-flex align-items-stretch">
-									<div class="overlay">
-										<div class="row">
-											<div class="col-sm-6 col-md-5">
-									  		<div class="about-img">
-												<img src="images/about-.png" class="img-fluid rounded b-shadow-a" alt="alter">
-									  		</div>
-											</div> -->
-											<!-- Details next to profile image -->
-											<div class="col-sm-6 col-md-7">
-									  		<!-- <div class="about-info">
-												<p style="text-align:justify; max-width:900px; margin:auto; padding-bottom:5px;">
-												<p><span class="title-s">Name: </span> <span>Aftab Ahmad </span></p>
-												<p><span class="title-s">Job Role: </span> <span>Data Analyst</span></p>
-												<p><span class="title-s">Experience: </span> <span>5 Years</span></p>
-												<p><span class="title-s">Address: </span> <span>Rawalakot, Azad Kashmir</span></p>
-												</p>
-									  		</div> -->
-											</div>
-								  		</div>
-										  	<p style="text-align:justify; max-width:900px; margin:auto; padding-bottom:5px;">	
-										<!-- <div class="skill-mf">
-											<p><span class="title-s">Skills</p>
-											<span>SQL</span> <span class="pull-right">95%</span>
-											<div class="progress">
-												<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-													aria-valuemax="100"></div>
-											</div>
-									
-											<span>PYTHON</span> <span class="pull-right">85%</span>
-											<div class="progress">
-												<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-													aria-valuemax="100"></div>
-											</div>
-									
-											<span>Data Visualization</span> <span class="pull-right">90%</span>
-											<div class="progress">
-												<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-													aria-valuemax="100"></div>
-											</div>
-									
-											<span>Statistical Analysis</span> <span class="pull-right">85%</span>
-											<div class="progress">
-												<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-													aria-valuemax="100"></div>
-											</div>
-									
-											<span>Machine Learning</span> <span class="pull-right">80%</span>
-											<div class="progress">
-												<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-													aria-valuemax="100"></div>
-											</div>
-										</div> -->
-									<!-- </div>
-								</div>
-							</div> -->
-					
-							<!-- <div class="col-md-6 col-lg-7 pl-lg-5 pb-5"> -->
-							<div class="col-md-12 heading-section ftco-animate"></div>
-								<!-- <div class="row justify-content-start pb-3"> -->
-									<div class="col-md-12 heading-section ftco-animate">
-										<div class="col-lg-12 text-center"> 								
-											<!-- <h1 class="big">About</h1> -->
-											<h3 class="mt-2" style="color: #000000"><strong>About Me</strong></h3>
-											<!-- <h2 class="mb-4">About Me</h2> -->
-											<p style="text-align:justify; max-width:900px; color: #070604; margin:auto; padding-bottom:5px;">As a business graduate, I recognized the transformative power of data analytics in today's evolving landscape. Driven by a commitment to lifelong learning, I dedicated myself to mastering this field, significantly enriching my professional journey and equipping me with the tools to make a meaningful impact.</p>
-										</div>
-										<div class="col-lg-12 text-center"> 
-<ul class="about-info mt-4 px-md-0 px-2" style="text-align:justify; max-width: 900px; color: #070604">
-    <li class="d-flex">
-        <span><strong>Education:</strong></span>
-        <span>Master of Commerce</span>
-    </li>
-    <li class="d-flex">
-        <span><strong>Certifications:</strong></span>
-        <ul style="list-style: none; padding-left: 20px;">
-            <li>&#8226; <a href="https://www.coursera.org/account/accomplishments/specialization/3NYEZNM3P4J8" 
-                           target="_blank" 
-                           style="text-decoration: none; color: #9b5404;" 
-                           title="Click to open Google Data Analytics Certificate">
-                           Google Data Analytics Professional Certificate
-                </a>
-            </li>
-            <li>&#8226; <a href="https://coursera.org/share/bc96a4b5f61259d9253e811c1104077c" 
-                           target="_blank" 
-                           style="text-decoration: none; color: #9b5404;" 
-                           title="Click to open Google Advanced Data Analytics Certificate">
-                           Google Advanced Data Analytics Professional Certificate
-                </a>
-            </li>
-            <li>&#8226; <a href="https://digiskills.pk/verify" 
-                           target="_blank" 
-                           style="text-decoration: none; color: #9b5404;" 
-                           title="Click to open Data Analytics and Business Intelligence Certificate">
-                           Data Analytics and Business Intelligence. Certificate ID (UKNJF3WMK)
-                </a>
-            </li>
-        </ul>
-    </li>
-    <li class="d-flex">
-        <span><strong>Languages:</strong></span>
-        <span>
-            &#8226; English,  
-            &#8226; Urdu
-        </span>
-    </li>
-    <li class="d-flex">
-        <span><strong>BI Tools:</strong></span>
-        <span>
-            &#8226; <a href="https://github.com/Aftab-Ahmadajk/Powerbi-Dashboards" 
-                       target="_blank" 
-                       style="text-decoration: none; color: #9b5404;" 
-                       title="Click to learn more about Microsoft Power BI">
-                       Microsoft Power BI
-                </a>,  
-            &#8226; <a href="https://public.tableau.com/app/profile/aftab.ahmad.khan7133/vizzes" 
-                       target="_blank" 
-                       style="text-decoration: none; color: #9b5404;" 
-                       title="Click to learn more about Tableau">
-                       Tableau Public
-                </a>
-        </span>
-    </li>
-    <li class="d-flex">
-        <span><strong>Technical Skills:</strong></span>
-        <span>
-            &#8226; Python (Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn),  
-            &#8226; Microsoft Excel,  
-            &#8226; SQL,  
-            &#8226; R,  
-            &#8226; Git,  
-            &#8226; Visual Studio Code,  
-            &#8226; Markdown,  
-            &#8226; PowerPoint,  
-            &#8226; Google Sheets,  
-            &#8226; Google Docs,  
-            &#8226; Adobe Photoshop (Beginner Level)
-        </span>
-    </li>
-    <li class="d-flex">
-        <span><strong>Soft Skills:</strong></span>
-        <span>
-            &#8226; Adaptability and flexibility,  
-            &#8226; Discipline and Time Management,  
-            &#8226; Attention to Detail,  
-            &#8226; Proactive Approach,  
-            &#8226; Interpersonal and Analytical Skills,  
-            &#8226; Individual and Teamwork
-        </span>
-    </li>
-</ul>
-										</div>
-									</div>
-								</div>
+    <div class="container">
+        <div class="row rounded-card ftco-animate" style="background-color:#f7f7f7; padding: 60px 30px;">
+            <div class="col-lg-12">
+                
+                <div class="heading-section text-center mb-5 ftco-animate">
+                    <h3 class="mb-2" style="color: #000000"><strong>About Me</strong></h3>
+                    <p style="text-align:justify; max-width:900px; color: #070604; margin:auto; line-height: 1.8;">
+                        As a business graduate, I recognized the transformative power of data analytics in today's evolving landscape. Driven by a commitment to lifelong learning, I dedicated myself to mastering this field, significantly enriching my professional journey and equipping me with the tools to make a meaningful impact.
+                    </p>
+                </div>
 
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="about-card ftco-animate">
+                            <ul class="about-info-list">
+                                <li>
+                                    <span class="info-title">Education</span>
+                                    <span class="info-content">Master of Commerce</span>
+                                </li>
+                                <li>
+                                    <span class="info-title">Certifications</span>
+                                    <span class="info-content" style="font-size: 13px;">
+                                        • <a href="https://coursera.org/share/bc96a4b5f61259d9253e811c1104077c" target="_blank">Google Data Analytics Professional Certificate</a><br>
+                                        • <a href="https://www.coursera.org/account/accomplishments/specialization/3NYEZNM3P4J8" target="_blank">Google Advanced Data Analytics Professional Certificate</a><br>
+                                        • <a href="https://digiskills.pk/verify" target="_blank">Data Analytics & Business Intelligence Certificate (ID UKNJF3WMK)</a>
+                                    </span>
+                                </li>                            
 
-								<!-- <div class="counter-wrap ftco-animate d-flex mt-md-3">
-									<div class="text">
-										<p class="mb-4">
-											<span class="number" data-number="30">0</span> <span>+</span>
-											<span>&nbsp; Projects completed</span>
-										</p>
-										<p><a href="https://www.linkedin.com/in/rishabhnmishra/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
-									</div>
-								</div> -->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </section>
+                                <li>
+                                    <span class="info-title">Languages</span>
+                                    <span class="info-content">English (Professional), Urdu (Native)</span>
+                                </li>
+                                <li>
+                                    <span class="info-title">BI Tools</span>
+                                    <span class="info-content">
+                                        <a href="https://github.com/Aftab-Ahmadajk/Powerbi-Dashboards" target="_blank">Power BI</a>, 
+                                        <a href="https://public.tableau.com/app/profile/aftab.ahmad.khan7133/vizzes" target="_blank">Tableau</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="info-title">Soft Skills</span>
+                                    <span class="info-content">Adaptability & Flexibility, Discipline and Time Management, Attention to Detail, Analytical Thinking, Proactive Approach, Individual and Teamwork</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
+                    <div class="col-md-6 mb-4">
+                        <div class="about-card ftco-animate">
+                            <ul class="about-info-list">
+
+                                <li>
+                                    <span class="info-title">Technical</span>
+                                    <span class="info-content">
+                                        Python (<strong>Pandas</strong>, NumPy, Matplotlib, Seaborn, Scikit-learn), <strong>Power Query</strong>, <strong>Microsoft Excel</strong>, <strong>SQL</strong>, Git, Visual Studio Code, Markdown, PowerPoint, Google Sheets, Google Docs, Adobe Photoshop (Beginner Level)
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
 
 	
     <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-			<div class="row" style="background-color:#f7f7f7">
-				<div class="col-lg-12 text-left"> <br>
-    					<div class="row justify-content-center pb-5">
-          			<div class="col-md-10 heading-section text-center ftco-animate">
-          				<!-- <h1 class="big big-2">Resume</h1> -->
-            			<h3 class="mb-2"><strong>Resume</strong></h3>
-					<div class="col-lg-12 text-left"></div>
-            			<p style = "color: #000000">Explore my professional journey, which began with a strong academic foundation and has evolved into a dynamic career in data analysis.</p>
-          			</div>
-        			</div>
+    <div class="container">
+        <div class="row rounded-card ftco-animate" style="background-color:#f7f7f7; padding: 60px 30px;">
+            <div class="col-lg-12">
+                
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-10 heading-section text-center ftco-animate">
+                        <h3 class="mb-2"><strong>Resume</strong></h3>
+                        <p style="color: #444">Bridging the gap between commercial strategy and technical data analytics.</p>
+                    </div>
+                </div>
 
-					<div class="row">
-						<!-- <h2 class="big-4">Experience</h2> -->
-						<h4 class="big-4" style="font-size: 2rem;">Experience</h4>
-						<div class="underline"></div>
-					</div>
-					<br>
-		
-					<div class="row">
-							<div class="col-md-6">
-								<div class="resume-wrap ftco-animate">
-									<span class="date">2017-Present</span>
-									<h2 style = "color: #00008B">Data Analyst Executive</h2>
-<!-- 									<span class="position" style = "color: #000000">Sui Southern Gas Company Limited.</span> -->
-									<p style = "color: #000000"> Data Analyst Executive at Sui Southern Gas Company Limited, contracted through <strong>Zafar & Sons Pvt. Limited</strong>.
-										<ul>
-											<li style = "color: #000000">Retrieve data from the Oracle ERP database system and prepare it using Microsoft Excel and PowerBI, transforming, cleaning, and manipulating it to ensure its quality and usability.</li>
-											<li style = "color: #000000">Automate data processes using Python, ensuring precision and reliability to enhance data quality and usability.</li>
-											<li style = "color: #000000">Prepare detailed monthly, quarterly, and annual cost and expense reports, analyzing financial trends using Power BI to support stakeholders for timely decision-making.</li>
-											<li style = "color: #000000">Develop interactive dashboards that highlight key metrics and data, directly addressing stakeholders' questions and objectives.</li>
-										</ul>
-									</p>
-								</div>
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <h3 class="big-4">Experience</h3>
+                    </div>
+                    
+                    <div class="col-md-12">
+                        <div class="resume-wrap ftco-animate">
+                            <span class="date">2017 - Present</span>
+                            <h2>Data Analyst Executive</h2>
+                            <span class="position">Sui Southern Gas Company Limited (Contract via Zafar & Sons)</span>
+                            <ul>
+                                <li><strong>Data Engineering:</strong> Extracted, cleaned, transformed, and manipulated large datasets from ERP systems and databases using Excel, Python, and Power BI to ensure data accuracy and usability..</li>
+                                <li><strong>Data Analysis:</strong> Analyzed revenue budgets, expenditures, and Capex utilization to monitor spending patterns, detect anomalies, and identify irregularities.</li>
+                                <li><strong>Reporting:</strong> Produced monthly, quarterly, and annual financial performance reports using Excel and Python to support management decision-making.</li>
+                                <li><strong>Visualization:</strong> Developed interactive Power BI and Tableau dashboards to present KPIs and operational insights aligned with stakeholder objectives.</li>
+                                <li><strong>Collaboration:</strong> Worked with operations and intelligence teams to resolve data issues, validate financial records, and optimize budget utilization.</li>
+                                <li><strong>Process Improvement:</strong> Conducted investigative analyses and improved internal data workflows to enhance reporting efficiency and reduce inconsistencies.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-							</div>
+                <br>
 
-							<!-- <div class="col-md-6">
-								<div class="resume-wrap ftco-animate">
-									<span class="date">2018-2021</span>
-									<h2>Senior Data Analyst</h2>
-									<span class="position">iQuanti</span>
-									<p class="mt-4">iQuanti is a data-driven digital marketing analytics and solutions company, helps top 100 global brands. 
-										<ul>
-											<li>Performed in-depth market research and analysis to create online pages. Resulted in ~100% website growth and 30% increase in conversion rate YoY.</li>
-											<li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI, Tableau and Python.</li>
-											<li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li>
-										</ul>
-									</p>
-								</div>
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <h4 class="big-4">Education</h4>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="resume-wrap ftco-animate">
+                            <span class="date">Post-Graduate</span>
+                            <h2>Master of Commerce</h2>
+                            <span class="position">University of Karachi</span>
+                            <p class="mt-3">Focused on advanced business logic and statistical commerce applications. <strong>Grade: B</strong></p>
+                        </div>
+                    </div>
 
-							</div> -->
-						</div>
+                    <div class="col-md-6">
+                        <div class="resume-wrap ftco-animate">
+                            <span class="date">Under-Graduate</span>
+                            <h2>Bachelor of Commerce</h2>
+                            <span class="position">University of Karachi</span>
+                            <p class="mt-3">Foundation in financial accounting and business economics. <strong>Grade: B</strong></p>
+                        </div>
+                    </div>
+                </div>
 
-					<br>
-					<br>
+                <div class="row justify-content-center mt-5">
+                    <div class="col-md-6 text-center ftco-animate">
+                        <a href="https://drive.google.com/file/d/1qwdB4SuBVsee6xixY6ndUDOCsMw1ULUe/view?usp=drive_link" target="_blank" class="btn btn-primary py-3 px-5" style="border-radius: 50px; font-weight: 700;">
+                            Download Full CV <span class="icon-download ml-2"></span>
+                        </a>
+                    </div>
+                </div>
 
-					<div class="row">
-						<!-- <h4 class="big-4">Education</h4> -->
-						<h4 class="big-4" style="font-size: 2rem;">Education</h4>
-						<div class="underline"></div>
-					</div>
-					<br>
-		
-						<div class="row">
-    						<div class="col-md-6">
-    							<div class="resume-wrap ftco-animate">
-    								<!-- <span class="date">2014-2018</span> -->
-    								<h2>Master of Commerce</h2>
-    								<span class="position" style = "color: #12055f">University Of Karachi</span>
-    								<p class="mt-4" style = "color: #000000">Grade: B</p>
-    							</div>
-    						</div>
-
-    						<div class="col-md-6">
-    							<div class="resume-wrap ftco-animate">
-    								<!-- <span class="date">2012-2013</span> -->
-    								<h2>Bachelor of Commerce</h2>
-    								<span class="position" style = "color: #12055f">University Of Karachi</span>
-    								<p class="mt-4" style = "color: #000000">Grade: B.</p>
-    							</div>
-							</div>
-    					</div>
-
-    					<div class="row justify-content-center mt-5">
-    						<div class="col-md-6 text-center ftco-animate">
-    							<h2><a href="https://drive.google.com/file/d/1qwdB4SuBVsee6xixY6ndUDOCsMw1ULUe/view?usp=drive_link" class="btn btn-primary py-3 px-4">Download CV</a></h2>
-    						</div>
-    					</div>
-					</div>
-			</div>
-    	</div>
-    </section>
-
-   
-
-<!--     
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <div class="container">
-		<div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="20">0</strong>
-                <span>Achievements</span>
-              </div>
             </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="30">0</strong>
-                <span>Projects</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="1000">0</strong>
-                <span>Mentored Students</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="500">0</strong>
-                <span>Cups of coffee</span>
-              </div>
-            </div>
-          </div>
         </div>
-      </div> -->
-	
-	  <!-- <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/pro-pic-.jpg)"> -->
+    </div>
+</section>
 
-		</div>
 	</section>
 
 
 
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    <div class="container">
+        <div class="row rounded-card ftco-animate justify-content-center" style="background-color:#f7f7f7; margin-bottom: 40px;">
+            <div class="col-lg-12 text-center"> 
+                <div class="row justify-content-center mb-5 pb-3">
+                    <div class="col-md-7 heading-section text-center ftco-animate">
+                        <h3 class="mb-2"><strong>Contact Me</strong></h3>
+                        <p style="color: #000000">The contact information is provided below!</p>
+                    </div>
+                </div>
+
+                <div class="row d-flex justify-content-center contact-info mb-5">
+                    <div class="col-md-6 col-lg-4 d-flex ftco-animate">
+                        <div class="align-self-stretch box p-4 text-center w-100">
+                            <div class="icon d-flex align-items-center justify-content-center mb-3">
+                                <span class="icon-map-signs" style="font-size: 30px; color: #007bff;"></span>
+                            </div>
+                            <h3 class="mb-4">Address</h3>
+                            <p style="color: #132daefb; margin: 0 auto; max-width: 250px;">
+                                Village Singola Himanari, zip code 12351, Rawalakot, Azad Kashmir Pakistan
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 d-flex ftco-animate">
+                        <div class="align-self-stretch box p-4 text-center w-100">
+                            <div class="icon d-flex align-items-center justify-content-center mb-3">
+                                <span class="icon-paper-plane" style="font-size: 30px; color: #007bff;"></span>
+                            </div>
+                            <h3 class="mb-4">Email Address</h3>
+                            <p>
+                                <a href="mailto:aftabajk@gmail.com" style="word-break: break-all;">aftabajk@gmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container pb-5">
+                    <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+                        <li class="ftco-animate normal-txt mr-2" style="color: #060adde4">Subscribe the Channel</li>
+                        <li class="ftco-animate">
+                            <a href="https://www.youtube.com/"><span class="icon-youtube"></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="ftco-footer ftco-section" style="padding: 4em 0; background: #222222;">
       <div class="container">
-		<div class="row" style="background-color:#f7f7f7">
-			<div class="col-lg-12 text-left"> <br>
-      				<div class="row justify-content-center mb-5 pb-3">
-          			<div class="col-md-7 heading-section text-center ftco-animate">
-            			<!-- <h1 class="big big-2">Contact</h1> -->
-            			<h3 class="mb-2"><strong>Contact Me</strong></h3>
-            			<p style = "color: #000000">The contact information is provided below.!</p>
-          			</div>
-        			</div>
-
-        			<div class="row d-flex contact-info mb-5">
-          			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          				<div class="align-self-stretch box p-4 text-center">
-          					<div class="icon d-flex align-items-center justify-content-center">
-          						<span class="icon-map-signs"></span>
-          					</div>
-          				<h3 class="mb-4">Address</h3>
-	            			<p style = "color: #132daefb">Village Singola Himanari, zip code 12351, Rawalakot, Azad Kashmir Pakistan</p>
-	          			</div>
-          			</div>
-          			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          				<div class="align-self-stretch box p-4 text-center">
-          					<div class="icon d-flex align-items-center justify-content-center">
-          						<span class="icon-phone2"></span>
-          					</div>
-          					<h3 class="mb-4">Contact Number</h3>
-	            			<p><a href="tel://+923152054105">+ 92315 2054105</a></p>
-	          			</div>
-          			</div>
-          			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          				<div class="align-self-stretch box p-4 text-center">
-          					<div class="icon d-flex align-items-center justify-content-center">
-          						<span class="icon-paper-plane"></span>
-          					</div>
-          					<h3 class="mb-4">Email Address</h3>
-	            			<p><a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWtDkwGQCmBfZNZDmzKBpvNbSNhXtSqvqwFSBwzGhQlvKlCnPdSFRWbFpVrdwSZFJLcHDXhml">aftabajk@gmail.com</a></p>
-	          			</div>
-          			</div>
-          			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          				<div class="align-self-stretch box p-4 text-center">
-          					<div class="icon d-flex align-items-center justify-content-center">
-          						<span class="icon-globe"></span>
-          					</div>
-          					<h3 class="mb-4">Whatsapp</h3>
-	            			<p><a href="https://wa.link/cqsb7d">Whatsapp link</a></p>
-	          			</div>
-          			</div>
-
-		  			<div class="container">
-						<!-- <br>
-						<br>
-						<div class="row justify-content-center">
-							<div class="col-md-7 ftco-animate text-center">
-								<h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
-							</div>
-						</div> -->
-						<br>
-						<br>
-						<br>
-						<br>
-						
-								<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  			<li class="ftco-animate normal-txt" style = "color: #060adde4">Find me on  </li>
-					  			<li class="ftco-animate"><a href="https://www.youtube.com/"><span class="icon-youtube"></span></a></li>
-<!-- 					  			<li class="ftco-animate"><a href="@Aftab_105"><span class="icon-twitter"></span></a></li> -->
-<!-- 					  			<li class="ftco-animate"><a href="https://www.facebook.com/people/Aftab-Ahmad/pfbid0vvP6TsJiKrDkT8kjfY8mRFfXT5bqKKTrhuhhJFhhYLg81PgaL9doFDoENQNpy6A6l/?_rdc=1&_rdr"></span></a></li> -->
-				      			<!-- <li class="ftco-animate"><a href="https://public.tableau.com/app/profile/aftab.ahmad.khan7133/vizzes"><span class="icon-Tableau"></span></a></li> -->
-					</ul>
-				<br>
-		   </div>
-   </div>
- </section>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p style="color: rgba(255,255,255,.5);">
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> 
+              All rights reserved | <strong>Aftab Ahmad</strong>
+            </p>
+            <p style="color: rgba(255,255,255,.3); font-size: 13px;">
+              Data Analyst Portfolio | Transforming Raw Data into Actionable Insights
+            </p>
+            
+            <div class="ftco-footer-widget mt-4">
+              <h2 class="ftco-heading-2">
+                <a href="#home-section" style="color: #007bff; text-decoration: none;">
+                  <span class="icon-arrow-up"></span> Back to Top
+                </a>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
 
- 
-	
-    <footer class="ftco-footer ftco-section">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12 text-center">
-  
-			  <!-- <p>Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	<!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-			</div>
-		  </div>
-		</div>
-	  </footer>
-
-
-  <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
@@ -733,6 +527,118 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+
+  <script>
+    function initParticles() {
+        const canvas = document.getElementById('particles-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        
+        // Resize canvas to fill the section
+        function resize() {
+            const parent = canvas.parentElement;
+            canvas.width = parent.offsetWidth;
+            canvas.height = parent.offsetHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+        
+        const particles = [];
+        const particleCount = 80;
+        const connectionDistance = 140;
+        
+        // Professional grey/blue palette
+        const colors = [
+            'rgba(6, 182, 212, 0.2)', 
+            'rgba(14, 165, 233, 0.2)', 
+            'rgba(0, 0, 0, 0.05)'
+        ];
+        
+        for (let i = 0; i < particleCount; i++) {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                size: Math.random() * 2 + 1,
+                speedX: (Math.random() - 0.5) * 0.5,
+                speedY: (Math.random() - 0.5) * 0.5,
+                color: colors[Math.floor(Math.random() * colors.length)]
+            });
+        }
+        
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            particles.forEach(p => {
+                p.x += p.speedX;
+                p.y += p.speedY;
+                
+                if (p.x <= 0 || p.x >= canvas.width) p.speedX *= -1;
+                if (p.y <= 0 || p.y >= canvas.height) p.speedY *= -1;
+                
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fillStyle = p.color;
+                ctx.fill();
+                
+                particles.forEach(p2 => {
+                    const dx = p.x - p2.x;
+                    const dy = p.y - p2.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < connectionDistance) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(0, 0, 0, ${0.1 * (1 - distance/connectionDistance)})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                });
+            });
+            
+            requestAnimationFrame(animate);
+        }
+        animate();
+    }
+    // Run after the page is loaded
+    window.addEventListener('load', initParticles);
+  </script>
+  <script>
+    function updatePortfolioDateTime() {
+        const now = new Date();
+        
+        // 1. Format the Time (e.g., 10:45:02 PM)
+        const timeOptions = { 
+            hour: '2-digit', 
+            minute: '2-digit', 
+            second: '2-digit', 
+            hour12: true 
+        };
+        const timeString = now.toLocaleTimeString('en-US', timeOptions);
+        
+        // 2. Format the Date (e.g., Friday, March 13, 2026)
+        const dateOptions = { 
+            weekday: 'long', 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+        };
+        const dateString = now.toLocaleDateString('en-US', dateOptions);
+
+        // Update the HTML elements
+        const timeElement = document.getElementById('current-time');
+        const dateElement = document.getElementById('current-date');
+        
+        if (timeElement) timeElement.textContent = timeString;
+        if (dateElement) dateElement.textContent = dateString;
+    }
+
+    // Run the function immediately when the page loads
+    updatePortfolioDateTime();
+    
+    // Update every single second (1000 milliseconds)
+    setInterval(updatePortfolioDateTime, 1000);
+</script>
     
   </body>
 </html>
