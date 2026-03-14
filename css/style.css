@@ -10030,3 +10030,30 @@ textarea.form-control {
         padding: 20px 15px !important;
     }
 }
+
+/* FINAL MOBILE OVERRIDE FIX */
+@media (max-width: 991.98px) {
+    /* 1. Force Navbar into normal flow to remove ghost space */
+    .ftco_navbar {
+        position: relative !important;
+        top: 0 !important;
+    }
+
+    /* 2. Reduce the huge top gap on the Home Section */
+    #home-section {
+        padding-top: 20px !important; 
+        min-height: auto !important; /* Prevents stretching on small screens */
+    }
+
+    /* 3. Tighten the Glass Card spacing */
+    .profile-glass-card {
+        padding: 30px 15px !important;
+        margin: 0 10px !important;
+    }
+
+    /* 4. Shrink the Hero Image for mobile */
+    .hero-img {
+        width: 150px !important;
+        height: 150px !important;
+    }
+}
